@@ -25,6 +25,8 @@ router.post("/addAddr", auth, User.addAddr)
 router.patch("/edit", auth, User.editUser)
 
 //edit other users
+router.patch("/editOther/:id", auth, User.editOtherUser)
+
 //delete me
 //delete user
 //delete address
