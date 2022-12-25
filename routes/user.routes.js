@@ -39,6 +39,7 @@ router.delete('/deleteAddresses', auth, User.deleteAddresses)
 
 
 //show all addresses
+router.get("/userAddresses", auth, User.getAllAddressess)
 
 //show single address
 

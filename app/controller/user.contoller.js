@@ -199,5 +199,17 @@ class User {
         }
     }
 
+    static getAllAddressess = async (req, res) => {
+        try {
+            const user = await userModel.findById(req.user._id)
+            myHelper.resHandler(res, 200, true, user.addresses, "User Address Array")
+        }
+        catch (e) {
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+
 }
+
+
 module.exports = User
