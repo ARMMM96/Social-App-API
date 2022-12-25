@@ -178,7 +178,15 @@ class User {
 
         }
     }
+    static deleteOtherUser = async (req, res) => {
+        try {
+            const user = await userModel.findByIdAndRemove(req.params.id)
+            myHelper.resHandler(res, 200, true, user, "Deleted")
+        } catch (e) {
+            myHelper.resHandler(res, 500, false, e, e.message)
 
+        }
+    }
 
 }
 module.exports = User
