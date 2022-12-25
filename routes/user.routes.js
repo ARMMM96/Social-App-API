@@ -28,10 +28,15 @@ router.patch("/edit", auth, User.editUser)
 router.patch("/editOther/:id", auth, User.editOtherUser)
 
 //delete me
+router.delete("/deleteMyAccount", auth, User.deleteMyAccount)
 //delete user
+
 //delete address
+
 //show all addresses
+
 //show single address
+
 //edit profile image
 router.patch("/profileImg", auth, upload.single("img"), User.uploadImage)
 router.patch("/profileImg1", auth, upload.single("img"), User.uploadImage1)

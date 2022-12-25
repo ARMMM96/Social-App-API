@@ -161,8 +161,18 @@ class User {
 
     static editOtherUser = async (req, res) => {
         try {
-            const user = await userModel.findByIdAndUpdate(req.params.id, req.body, { runValidators: true, new: true },)
+            const user = await userModel.findByIdAndUpdate(req.params.id, req.body, { runValidators: true, new: true })
             myHelper.resHandler(res, 200, true, user, "updated")
+        } catch (e) {
+            myHelper.resHandler(res, 500, false, e, e.message)
+
+        }
+    }
+
+    static deleteMyAccount = async (req, res) => {
+        try {
+            const user = await userModel.findOneAndRemove(req.user._id)
+            myHelper.resHandler(res, 200, true, user, "Deleted")
         } catch (e) {
             myHelper.resHandler(res, 500, false, e, e.message)
 
