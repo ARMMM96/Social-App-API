@@ -188,5 +188,16 @@ class User {
         }
     }
 
+    static deleteAddresses = async (req, res) => {
+        try {
+            const user = await userModel.findByIdAndUpdate(req.user._id, req.body, { new: true })
+            console.log(user)
+            myHelper.resHandler(res, 200, true, user, "Addresses Removed")
+        } catch (e) {
+            myHelper.resHandler(res, 500, false, e, e.message)
+
+        }
+    }
+
 }
 module.exports = User

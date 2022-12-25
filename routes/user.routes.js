@@ -35,6 +35,8 @@ router.delete("/deleteOtherUser/:id", auth, User.deleteOtherUser)
 
 
 //delete address
+router.delete('/deleteAddresses', auth, User.deleteAddresses)
+
 
 //show all addresses
 
