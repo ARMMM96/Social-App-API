@@ -42,6 +42,7 @@ router.delete('/deleteAddresses', auth, User.deleteAddresses)
 router.get("/userAddresses", auth, User.getAllAddressess)
 
 //show single address
+router.get("/getSingleAddress/:id", auth, User.getSingleAddress)
 
 //edit profile image
 router.patch("/profileImg", auth, upload.single("img"), User.uploadImage)

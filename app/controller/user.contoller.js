@@ -208,6 +208,16 @@ class User {
             myHelper.resHandler(res, 500, false, e, e.message)
         }
     }
+    static getSingleAddress = async (req, res) => {
+        try {
+            const user = await userModel.findById(req.user._id)
+            console.log(req.params.id)
+            myHelper.resHandler(res, 200, true, user.addresses[req.params.id], "User Address Array")
+        }
+        catch (e) {
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
 
 }
 
