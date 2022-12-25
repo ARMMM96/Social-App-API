@@ -161,7 +161,7 @@ class User {
 
     static editOtherUser = async (req, res) => {
         try {
-            const user = await userModel.findByIdAndUpdate(req.params.id, req.body, { runValidators: true, new: true })
+            const user = await userModel.findByIdAndUpdate(req.params.id, req.body, { new: true })
             myHelper.resHandler(res, 200, true, user, "updated")
         } catch (e) {
             myHelper.resHandler(res, 500, false, e, e.message)
