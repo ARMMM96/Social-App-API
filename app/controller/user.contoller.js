@@ -144,8 +144,19 @@ class User {
             })
         }
         catch (e) {
-            res.send(e.message)
+            myHelper.resHandler(res, 500, false, e, e.message)
         }
+    }
+
+    static editUser = async (req, res) => {
+        try {
+            const user = await userModel.findByIdAndUpdate(req.user._id, req.body, { runValidators: true, new: true },)
+            myHelper.resHandler(res, 200, true, user, "updated")
+
+        } catch (e) {
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+
     }
 }
 module.exports = User
