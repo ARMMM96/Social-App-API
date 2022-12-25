@@ -171,12 +171,14 @@ class User {
 
     static deleteMyAccount = async (req, res) => {
         try {
-            const user = await userModel.findOneAndRemove(req.user._id)
+            const user = await userModel.findByIdAndRemove(req.user._id)
             myHelper.resHandler(res, 200, true, user, "Deleted")
         } catch (e) {
             myHelper.resHandler(res, 500, false, e, e.message)
 
         }
     }
+
+
 }
 module.exports = User

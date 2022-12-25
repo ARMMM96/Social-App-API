@@ -29,7 +29,10 @@ router.patch("/editOther/:id", auth, User.editOtherUser)
 
 //delete me
 router.delete("/deleteMyAccount", auth, User.deleteMyAccount)
+
 //delete user
+router.delete("/deleteOtherUser/:id", auth, User.deleteOtherUser)
+
 
 //delete address
 
