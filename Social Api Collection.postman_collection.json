@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "a784adc5-eb36-4966-9e28-2af287f3dbbb",
+		"name": "Social Api Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Posts Actions",
+			"item": [
+				{
+					"name": "Get All posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE2OTczODB9.xDYeLlQ2RLDnesaVgpyC2cyjpSYt9V_0ARzPLXqD0T0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/post/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"post",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE2OTczODB9.xDYeLlQ2RLDnesaVgpyC2cyjpSYt9V_0ARzPLXqD0T0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"63a416898ff1c66dce48e637\",\r\n    \"newContent\": \"Helo Hello1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/post/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"post",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE2OTczODB9.xDYeLlQ2RLDnesaVgpyC2cyjpSYt9V_0ARzPLXqD0T0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postId\": \"63a4167f8ff1c66dce48e632\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/post/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"post",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE2OTczODB9.xDYeLlQ2RLDnesaVgpyC2cyjpSYt9V_0ARzPLXqD0T0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"postType\": \"txt\",\r\n    \"content\": \"post 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/post/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"post",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Actions",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fName\": \"other   test\",\r\n    \"lName\": \"otherlastname 1\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"123456789\",\r\n    \"addresses\": {\r\n        \"addressType\": \"home 23\",\r\n        \"details\": {\r\n            \"Street\": \"hell street\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\":\"123456789\" \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activate User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE1MzEzMjV9.aIpaFyHl28Q9dGNJJBNzKF_dnVoiTwEgi450l0TpG7o",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/activate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"activate"
+							],
+							"query": [
+								{
+									"key": "activate",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE1MzEzMjV9.aIpaFyHl28Q9dGNJJBNzKF_dnVoiTwEgi450l0TpG7o",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/deleteOtherUser/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"deleteOtherUser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload image ",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE1MzEzMjV9.aIpaFyHl28Q9dGNJJBNzKF_dnVoiTwEgi450l0TpG7o",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "token",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE1MzEzMjV9.aIpaFyHl28Q9dGNJJBNzKF_dnVoiTwEgi450l0TpG7o",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/image1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"image1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2E3YzZjNzNlMmY3OTdkOGFlYjJkNjMiLCJpYXQiOjE2NzE5Mzk3OTJ9.TZL19_mVtKPsWPgrsPqYMIiKd5a4BeS1rlFMw-WWYH8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addresses\": [\r\n        {\r\n            \"addressType\": \"addres 1\",\r\n            \"details\": {\r\n                \"Street\": \"bla bla \"\r\n            }\r\n        },\r\n        {\r\n            \"addressType\": \"addres 2\",\r\n            \"details\": {\r\n                \"Street\": \"bla bla \"\r\n            }\r\n        },\r\n        {\r\n            \"addressType\": \"addres 3\",\r\n            \"details\": {\r\n                \"Street\": \"bla bla \"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit other user ",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ExNDY3NDc1YzVlNjI3NTYwNTlhYTciLCJpYXQiOjE2NzE1MzEzMjV9.aIpaFyHl28Q9dGNJJBNzKF_dnVoiTwEgi450l0TpG7o",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fName\": \"Ramy first name\",\r\n    \"lName\": \"Yousef last name\",\r\n    \"status\": \"true\",\r\n    \"email\": \"newEmail@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/editOther/63a7b5f6778b8feb3075bc4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"editOther",
+								"63a7b5f6778b8feb3075bc4f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All user addresses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2E3YzZjNzNlMmY3OTdkOGFlYjJkNjMiLCJpYXQiOjE2NzE5NDEzMDR9.VFIWi4nb1Wf4_I5z8ojZNYNI71Z9m2ERe-FXsUAxqpg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/userAddresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"userAddresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Other User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2E3YjU1Yjc3OGI4ZmViMzA3NWJjNDYiLCJpYXQiOjE2NzE5MzY4ODl9.8Kj30IRGZSfRhWn9-UcJ9pv7MKYoOcACZlbhob4PfBA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/deleteOtherUser/63a7bc79ee537345805e748c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"deleteOtherUser",
+								"63a7bc79ee537345805e748c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Addresses",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2E3YzZjNzNlMmY3OTdkOGFlYjJkNjMiLCJpYXQiOjE2NzE5Mzk3OTJ9.TZL19_mVtKPsWPgrsPqYMIiKd5a4BeS1rlFMw-WWYH8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addresses\": [\r\n        {\r\n            \"addressType\": \"\",\r\n            \"details\": {}\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/deleteAddresses/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"deleteAddresses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Git single user address by id ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2E3YzZjNzNlMmY3OTdkOGFlYjJkNjMiLCJpYXQiOjE2NzE5NDEzMDR9.VFIWi4nb1Wf4_I5z8ojZNYNI71Z9m2ERe-FXsUAxqpg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/user/getSingleAddress/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"getSingleAddress",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
